@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Clor_click</string>
+    <!-- 1. головний екран -->
+    <string name="txt_main_title">Тестовий додаток</string>
+    <string name="btn_main_app_1">Швидкий колір</string>
+
+    <!-- 2. Гра колір -->
+    <string name="txt_fast_color_title">Швидкий колір</string>
+    <string name="txt_fast_color_bill">Рахунок</string>
+    <string name="txt_fast_color_time">Час</string>
+
+    <string name="btn_fast_color_red">Червоний</string>
+    <string name="btn_fast_color_green">Зелений</string>
+    <string name="btn_fast_color_blue">Синій</string>
+
+    <string name="btn_fast_color_start">Почати</string>
+    <string name="btn_fast_color_reset">Скинути</string>
+</resources>
