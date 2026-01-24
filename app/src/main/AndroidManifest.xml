@@ -24,6 +24,10 @@
             android:exported="true"
             android:name=".FastColor">
         </activity>
+        <activity
+            android:exported="true"
+            android:name=".TicTacToe">
+        </activity>
 
     </application>
 

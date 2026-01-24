@@ -9,14 +9,23 @@ import android.widget.TextView;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.util.Random;
+
 public class FastColor extends AppCompatActivity {
     private TextView scoreText, timerText, targetColorText;
     private Button startButton, resetButton;
+
 
     private int score = 0;
     private int timeLeft = 30;
 
     private CountDownTimer timer;
+
+    private final Random random = new Random();
+
+    private final String[] colors = {"RED","GREEN","BLUE"};
+
+    private  String currentTargetColor = "";
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -34,7 +43,34 @@ public class FastColor extends AppCompatActivity {
         resetButton.setOnClickListener(v -> resetGame());
     }
     public void onColorClick(View view){
+        if (timer == null) return;
+        String pressColor = "";
+        if (view.getId() == R.id.redButton){
+            pressColor = "RED";
+        }
+        if (view.getId() == R.id.greenButton){
+            pressColor = "GREEN";
+        }
+        if (view.getId() == R.id.blueButton){
+            pressColor = "BLUE";
+        }
 
+        if (pressColor.equals(currentTargetColor)){
+            score ++;
+            scoreText.setText(String.valueOf(score));
+        }else {
+            timeLeft -= 5;
+            if (timeLeft < 0) timeLeft = 0;
+
+            timerText.setText(String.valueOf(timeLeft));
+
+            if(timeLeft == 0){
+                timer.cancel();
+                finishGame();
+                return;
+            }
+        }
+        pickNewColor();
     }
 
     private void startGame(){
@@ -43,6 +79,8 @@ public class FastColor extends AppCompatActivity {
 
         scoreText.setText("0");
         timerText.setText("30");
+
+        pickNewColor();
 
         timer = new CountDownTimer(timeLeft * 1000L, 1000) {
             @Override
@@ -64,6 +102,26 @@ public class FastColor extends AppCompatActivity {
         }.start();
 
     }
+
+    private void  pickNewColor(){
+        int i = random.nextInt(colors.length);
+        currentTargetColor = colors[i];
+
+        switch (currentTargetColor){
+            case "RED":
+                targetColorText.setText("Червоний");
+                targetColorText.setTextColor(0xFFF44336);
+                break;
+            case "GREEN":
+                targetColorText.setText("Зелений");
+                targetColorText.setTextColor(0xFF4CAF50);
+                break;
+            case "BLUE":
+                targetColorText.setText("Синій");
+                targetColorText.setTextColor(0xFF2196F3);
+                break;
+        }
+    }
    
     private void finishGame(){
         timer = null;
@@ -73,7 +131,16 @@ public class FastColor extends AppCompatActivity {
     }
 
     private void resetGame(){
-
+        if(timer != null) {
+           timer.cancel();
+           timer = null;
+        }
+        score = 0;
+        timeLeft = 30;
+        scoreText.setText("0");
+        timerText.setText("30");
+        targetColorText.setText("Натисніть колір");
+        targetColorText.setTextColor(0xFF444444);
     }
 
 }

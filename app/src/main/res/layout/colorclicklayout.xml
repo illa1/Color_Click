@@ -26,6 +26,13 @@
         android:text="@string/btn_main_app_1"
         android:textSize="22sp"
         />
+    <Button
+        android:id="@+id/btn_tic_tac_toe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_tic_tac_toe"
+        android:textSize="22sp"
+        />
 
 
 </LinearLayout>

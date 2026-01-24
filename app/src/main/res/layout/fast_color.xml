@@ -151,7 +151,7 @@
             android:id="@+id/targetColorText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="ЧЕРВОНИЙ"
+            android:text="Натисніть колір"
             android:textSize="26sp"
             android:textStyle="bold"
             android:textColor="#F44336" />

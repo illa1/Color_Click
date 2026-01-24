@@ -15,9 +15,18 @@ public class App_colorclick extends AppCompatActivity {
         setContentView(R.layout.colorclicklayout);
         Button fastColor = findViewById(R.id.button_fast_color);
         fastColor.setOnClickListener(view -> openFastColor());
+
+        Button ticTacToe = findViewById(R.id.btn_tic_tac_toe);
+        ticTacToe.setOnClickListener(view -> openTicTacToe());
+
+
     }
     private void openFastColor(){
         Intent intent = new Intent(App_colorclick.this, FastColor.class);
+        startActivity(intent);
+    }
+    private  void openTicTacToe(){
+        Intent intent = new Intent(App_colorclick.this, TicTacToe.class);
         startActivity(intent);
     }
 }
