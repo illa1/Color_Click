@@ -1,22 +1,69 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
              android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="136dp"
-        android:layout_height="59dp"
-        android:text="Button"
-        tools:layout_editor_absoluteX="137dp"
-        tools:layout_editor_absoluteY="65dp" />
 
-    <Button
-        android:id="@+id/button2"
+    <TextView
+        android:id="@+id/statusTextInfo"
+        android:layout_width="345dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="4dp"
+        android:text="@string/txt_tic_tac_toe_title"
+        android:textColor="@color/purple_700"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints"
+        android:textAlignment="center"/>
+
+    <GridLayout
+        android:id="@+id/gameGrid"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button"
-        tools:layout_editor_absoluteX="159dp"
-        tools:layout_editor_absoluteY="137dp" />
+        android:layout_marginTop="176dp"
+        android:alignmentMode="alignMargins"
+        android:columnCount="3"
+        android:padding="15dp"
+        android:rowCount="3"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="58dp">
+
+        <Button android:id="@+id/btn_tic_tac_toe_0" />
+
+        <Button android:id="@+id/btn_tic_tac_toe_1" />
+
+        <Button android:id="@+id/btn_tic_tac_toe_2" />
+
+        <Button android:id="@+id/btn_tic_tac_toe_3" />
+
+        <Button android:id="@+id/btn_tic_tac_toe_4" />
+
+        <Button android:id="@+id/btn_tic_tac_toe_5" />
+
+        <Button android:id="@+id/btn_tic_tac_toe_6" />
+
+        <Button android:id="@+id/btn_tic_tac_toe_7" />
+
+        <Button android:id="@+id/btn_tic_tac_toe_8" />
+    </GridLayout>
+
+    <Button
+        android:id="@+id/resetButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="224dp"
+        android:text="Почати спочатку"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gameGrid">
+
+    </Button>
 </androidx.constraintlayout.widget.ConstraintLayout>

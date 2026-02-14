@@ -15,5 +15,8 @@
 
     <string name="btn_fast_color_start">Почати</string>
     <string name="btn_fast_color_reset">Скинути</string>
+<!--    Хрестики нулики-->
+    <string name="txt_tic_tac_toe_title">Хрестики Нулики</string>
+    <string name="btn_tic_tac_toe_title">Почати спочатку</string>
 
 </resources>
