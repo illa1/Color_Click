@@ -19,4 +19,6 @@
     <string name="txt_tic_tac_toe_title">Хрестики Нулики</string>
     <string name="btn_tic_tac_toe_title">Почати спочатку</string>
 
+    <string name="menu_main">Головне меню</string>
+
 </resources>

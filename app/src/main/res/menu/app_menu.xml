@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/menu_main"
+        android:title="@string/menu_main"
+        app:showAsAction="never"
+        />
+    <item
+        android:id="@+id/menu_fast_color"
+        android:title="Швидкий колір"
+        app:showAsAction="never"
+        />
+    <item
+        android:id="@+id/menu_tic_tac_toe"
+        android:title="Хрестики-нулики"
+        app:showAsAction="never"
+        />
+
+
+</menu>
